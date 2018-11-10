@@ -94,11 +94,10 @@ class ConvNet(object):
         with tf.Session() as sess:
             sess.run(tf.global_variables_initializer())
             saver = tf.train.Saver()
-            ckpt = tf.train.get_checkpoint_state(os.path.dirname('checkpoints/vgg16/checkpoint'))
-            if ckpt and ckpt.model_checkpoint_path:
+            try:
                 saver.restore(sess, FLAGS.vgg16_path)
                 print('Checkpoint found')
-            else:
+            except:
                 print('No checkpoint found')
             for (dirpath, dirnames, filenames) in os.walk(FLAGS.photo_dir):
                 final_scores = {}
