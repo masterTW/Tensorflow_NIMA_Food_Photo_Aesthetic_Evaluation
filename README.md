@@ -17,7 +17,8 @@
 3. I will release the training code soon.
 # Evaluation
 1. 下載 [model](https://drive.google.com/file/d/16eK7ByJi1zV68v7OS6LKshDlll-AeSpj/view?usp=sharing) 或自己訓練model
-2. 執行下列指令, 程式會去讀取資料夾中的所有圖片進行美學評分
+2. 執行下列指令, 程式會去讀取資料夾中的所有圖片進行美學評分<br />
+
 ```python3 evaluate_nima_vgg16.py --photo_dir= <path to photo> --vgg16_path= <path to vgg16>```
 
 # Resullt
