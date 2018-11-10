@@ -19,10 +19,10 @@
 1. 下載 [model](https://drive.google.com/file/d/16eK7ByJi1zV68v7OS6LKshDlll-AeSpj/view?usp=sharing) 或自己訓練model
 2. 執行下列指令, 程式會去讀取資料夾中的所有圖片進行美學評分<br />
 
-```python3 evaluate_nima_vgg16.py --photo_dir= <path to photo> --vgg16_path= <path to vgg16>```
+```python3 evaluate_nima_vgg16.py --photo_dir= <path to photodir> --vgg16_path= <path to vgg16>```
 
 # Resullt:
-  - 美食照片訓練data的分類成功率達到88.3%, 測試資料的分類準確度達到73.5%, 符合論文[2]實驗結果.
+  - 美學分數5分以上代表high, 低於5分代表low, 透過AVA 500張食物圖片作驗證, 測試資料的分類準確度達到73.5%, 符合論文[2]實驗結果.
 # To-Do List:
   - 縮小模型檔案大小, 使用MobileNet
   - 用Tensorflow.js製作Web版本
