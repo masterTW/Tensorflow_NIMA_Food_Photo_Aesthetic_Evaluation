@@ -11,22 +11,22 @@
   - Python 3
   - TensorFlow
 
-# Training
+# Training:
 1. 下載 [AVA資料集](https://github.com/mtobeiyf/ava_downloader)
 2. 下載 [Slim VGG16 pretrained model](https://github.com/tensorflow/models/tree/master/research/slim). These CNNs have been trained on the ILSVRC-2012-CLS image classification dataset.
 3. I will release the training code soon.
-# Evaluation
+# Evaluation:
 1. 下載 [model](https://drive.google.com/file/d/16eK7ByJi1zV68v7OS6LKshDlll-AeSpj/view?usp=sharing) 或自己訓練model
 2. 執行下列指令, 程式會去讀取資料夾中的所有圖片進行美學評分<br />
 
 ```python3 evaluate_nima_vgg16.py --photo_dir= <path to photo> --vgg16_path= <path to vgg16>```
 
-# Resullt
+# Resullt:
   - 美食照片訓練data的分類成功率達到88.3%, 測試資料的分類準確度達到73.5%, 符合論文[2]實驗結果.
-# To-Do List
+# To-Do List:
   - 縮小模型檔案大小, 使用MobileNet
   - 用Tensorflow.js製作Web版本
-# References
+# References:
  1.   Talebi, Hossein, and Peyman Milanfar. "NIMA: Neural Image Assessment" IEEE Transactions on Image Processing, 2017
  2.   Jiayu Lou, Hang Yang. "Food Image Aesthetic Quality Measurement by Distribution Prediction", 2018
  3.   Naila Murray, Luca Marchesotti, Florent Perronnin. "AVA: A Large-Scale Database for Aesthetic Visual Analysis", 2012
