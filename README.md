@@ -22,7 +22,7 @@
 ```python3 evaluate_nima_vgg16.py --photo_dir= <path to photo> --vgg16_path= <path to vgg16>```
 
 # Resullt
-  - 美食照片的訓練data的分類成功率達到88.3%, 測試資料的分類準確度達到73.5%, 符合論文[2]實驗結果.
+  - 美食照片訓練data的分類成功率達到88.3%, 測試資料的分類準確度達到73.5%, 符合論文[2]實驗結果.
 # To-Do List
   - 縮小模型檔案大小, 使用MobileNet
   - 用Tensorflow.js製作Web版本
