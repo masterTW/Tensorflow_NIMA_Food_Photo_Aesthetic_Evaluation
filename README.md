@@ -1,7 +1,7 @@
 # Tensorflow_NIMA_Food_Photo_Aesthetic_Evaluation
 透過Tensorflow Slim實作Google NIMA論文,  透過VGG16模型幫美食照片進行評分.
 5分以上代表high, 低於5分代表low
-
+<img src="https://github.com/masterTW/Tensorflow_NIMA_Food_Photo_Aesthetic_Evaluation/blob/master/photo1.png?raw=true" height=100% width=100%>
 # User Story:
   - user想寫一篇受歡迎的食記, 拍了一堆品質參差不齊的美食照片卻不知道使用哪一張, 透過本系統從美食照片中篩選出最吸引人的食物照片, 供user參考.
 
