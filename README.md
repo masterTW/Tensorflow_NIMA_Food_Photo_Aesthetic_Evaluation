@@ -13,7 +13,7 @@ Implementation of Google NIMA paper by Tensorflow Slim. Evaluate food photos wit
 # Training:
 1. Download [AVA dataset](https://github.com/mtobeiyf/ava_downloader)
 2. Download [Slim VGG16 pre-trained model](https://github.com/tensorflow/models/tree/master/research/slim). These CNNs have been trained on the ILSVRC-2012-CLS image classification dataset.
-3. I will release the training code soon.
+3. Training code will be released soon.
 # Evaluation:
 1. Download [model](https://drive.google.com/file/d/16eK7ByJi1zV68v7OS6LKshDlll-AeSpj/view?usp=sharing)  or self-trained model.
 2. Run below instruction and the program will load all the photos in dataset for esthetic evaluation. <br />
