@@ -23,8 +23,8 @@ Implementation of Google NIMA paper by Tensorflow Slim. Evaluate food photos wit
 # Resullt:
   - Esthetic score of 5 or above means successful photo. Lower than 5 means not so good. Tested the model with 500 AVA food photos and confirmed the accuracy is up to 73.5%, which matches the result of the paper[2].
 # To-Do List:
-  - Downsize the file of model with MobileNet
-  - Create Web version with Tensorflow.js
+  - Downsize the file of model with MobileNet.
+  - Create Web version with Tensorflow.js.
 # References:
  1.   Talebi, Hossein, and Peyman Milanfar. "NIMA: Neural Image Assessment" IEEE Transactions on Image Processing, 2017
  2.   Jiayu Lou, Hang Yang. "Food Image Aesthetic Quality Measurement by Distribution Prediction", 2018
