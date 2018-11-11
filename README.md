@@ -5,7 +5,7 @@ Implementation of Google NIMA paper by Tensorflow Slim. Evaluate food photos wit
   - User wants to publish a popular food journal, but does not know which food photos to choose from a wide range of photos. This system helps user to select the most appealing food photos for user’s reference. 
 
 # Introduction:
-- Google NIMA paper[1] mentions evaluating photos esthetically with AVA esthetic photo gallery[3]. Another paper[2] shows that to train a model to evaluate food photos, you only need to use a few AVA food photos to have successful results. So this project uses 5000 AVA food photos as dataset.
+- Google NIMA paper[1] mentions evaluating photos esthetically with AVA esthetic photo gallery[3]. Another paper[2] shows that to train a model to evaluate food photos, one only needs to use a few AVA food photos to have successful results. So this project uses 5000 AVA food photos as dataset.
 # Requirements:
   - Python 3
   - TensorFlow
