@@ -20,7 +20,7 @@ Implementation of Google NIMA paper by Tensorflow Slim. Evaluate food photos wit
 
 ```python3 evaluate_nima_vgg16.py --photo_dir= <path to photodir> --vgg16_path= <path to vgg16>```</br>
 example:</br>
-```python3 evaluate_nima_vgg16.py --photo_dir=image --vgg16_path=vgg/nima-22500```
+```python3 evaluate_nima_vgg16.py --photo_dir=image/ --vgg16_path=vgg/nima-22500```
 # Resullt:
   - Esthetic score of 5 or above means successful photo. Lower than 5 means not so good. Tested the model with 500 AVA food photos and confirmed the accuracy is up to 73.5%, which matches the result of the paper[2].
 # To-Do List:
