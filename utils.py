@@ -92,9 +92,9 @@ def preprocess_testdata(example, num_classes=10, is_training=False):
     scores = scores / tf.reduce_sum(scores, axis=-1, keepdims=True)
     return image, scores
 
-def get_nima_dataset(batch_size):
+def get_nima_dataset(dataset_dir, batch_size):
 
-    train_folder = os.path.join('TFdataset', '{}_*.tfrecord'.format('train'))
+    train_folder = os.path.join(dataset_dir, '{}_*.tfrecord'.format('train'))
     train_file = tf.data.Dataset.list_files(train_folder)
     train_dataset = tf.data.TFRecordDataset(train_file)
     train_dataset = train_dataset.shuffle(1000)
@@ -102,7 +102,7 @@ def get_nima_dataset(batch_size):
     train_dataset = train_dataset.map(preprocess)
     train_dataset = train_dataset.batch(batch_size)
 
-    test_folder = os.path.join('TFdataset', '{}_*.tfrecord'.format('test'))
+    test_folder = os.path.join(dataset_dir, '{}_*.tfrecord'.format('test'))
     test_file = tf.data.Dataset.list_files(test_folder)
     test_dataset = tf.data.TFRecordDataset(test_file)
     #dataset = dataset.repeat()
