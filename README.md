@@ -1,31 +1,31 @@
 # Tensorflow_NIMA_Food_Photo_Aesthetic_Evaluation
-透過Tensorflow Slim實作Google NIMA論文,  透過VGG16模型幫美食照片進行評分.
-5分以上代表high, 低於5分代表low</br>
+Implementation of Google NIMA paper by Tensorflow Slim. Evaluate food photos with VGG16 model. Score of 5 or above means successful photo. Lower than 5 means not so good.</br>
 <img src="https://github.com/masterTW/Tensorflow_NIMA_Food_Photo_Aesthetic_Evaluation/blob/master/photo1.png?raw=true" height=60% width=60%>
 # User Story:
-  - user想寫一篇受歡迎的食記, 拍了一堆品質參差不齊的美食照片卻不知道使用哪一張, 透過本系統從美食照片中篩選出最吸引人的食物照片, 供user參考.
+  - User wants to publish a popular food journal, but does not know which food photos to choose from a wide range of photos. This system helps user to select the most appealing food photos for user’s reference. 
 
 # Introduction:
-- Google NIMA論文[1]透過AVA美學圖片資料集[3], 對圖片進行美學評分, 論文[2]顯示預測美食照片的分數,只需要少量的AVA美食照片做訓練即可有不錯的結果, 因此, 本專案使用5000張AVA的美食照片當作資料集.
+- Google NIMA paper[1] mentions evaluating photos esthetically with AVA esthetic photo gallery[3]. Another paper[2] shows that to train a model to evaluate food photos, one only needs to use a few AVA food photos to have successful results. So this project uses 5000 AVA food photos as dataset.
 # Requirements:
   - Python 3
   - TensorFlow
 
 # Training:
-1. 下載 [AVA資料集](https://github.com/mtobeiyf/ava_downloader)
-2. 下載 [Slim VGG16 pretrained model](https://github.com/tensorflow/models/tree/master/research/slim). These CNNs have been trained on the ILSVRC-2012-CLS image classification dataset.
-3. I will release the training code soon.
+1. Download [AVA dataset](https://github.com/mtobeiyf/ava_downloader).
+2. Download [Slim VGG16 pre-trained model](https://github.com/tensorflow/models/tree/master/research/slim). These CNNs have been trained on the ILSVRC-2012-CLS image classification dataset.
+3. Training code will be released soon.
 # Evaluation:
-1. 下載 [model](https://drive.google.com/file/d/16eK7ByJi1zV68v7OS6LKshDlll-AeSpj/view?usp=sharing) 或自己訓練model
-2. 執行下列指令, 程式會去讀取資料夾中的所有圖片進行美學評分<br />
+1. Download [model](https://drive.google.com/file/d/16eK7ByJi1zV68v7OS6LKshDlll-AeSpj/view?usp=sharing)  or use self-trained model.
+2. Run below instruction and the program will load all the photos in dataset for esthetic evaluation. <br />
 
-```python3 evaluate_nima_vgg16.py --photo_dir= <path to photodir> --vgg16_path= <path to vgg16>```
-
+```python3 evaluate_nima_vgg16.py --photo_dir= <path to photodir> --vgg16_path= <path to vgg16>```</br>
+example:</br>
+```python3 evaluate_nima_vgg16.py --photo_dir=image/ --vgg16_path=vgg/nima-22500```
 # Resullt:
-  - 美學分數5分以上代表high, 低於5分代表low, 透過AVA 500張食物圖片作驗證, 測試資料的分類準確度達到73.5%, 符合論文[2]實驗結果.
+  - Esthetic score of 5 or above means successful photo. Lower than 5 means not so good. Tested the model with 500 AVA food photos and confirmed the accuracy is up to 73.5%, which matches the result of the paper[2].
 # To-Do List:
-  - 縮小模型檔案大小, 使用MobileNet
-  - 用Tensorflow.js製作Web版本
+  - Downsize the file of model with MobileNet.
+  - Create Web version with Tensorflow.js.
 # References:
  1.   Talebi, Hossein, and Peyman Milanfar. "NIMA: Neural Image Assessment" IEEE Transactions on Image Processing, 2017
  2.   Jiayu Lou, Hang Yang. "Food Image Aesthetic Quality Measurement by Distribution Prediction", 2018
