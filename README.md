@@ -1,6 +1,6 @@
 # Tensorflow_NIMA_Food_Photo_Aesthetic_Evaluation
 Implementation of Google NIMA paper by Tensorflow Slim. Evaluate food photos with VGG16 model. Score of 5 or above means successful photo. Lower than 5 means not so good.</br>
-<img src="https://github.com/masterTW/Tensorflow_NIMA_Food_Photo_Aesthetic_Evaluation/blob/master/photo1.png?raw=true" height=60% width=60%>
+<img src="https://github.com/masterTW/Tensorflow_NIMA_Food_Photo_Aesthetic_Evaluation/blob/master/web_photo.png?raw=true" height=60% width=60%>
 # User Story:
   - User wants to publish a popular food journal, but does not know which food photos to choose from a wide range of photos. This system helps user to select the most appealing food photos for user’s reference. 
 
