@@ -19,7 +19,6 @@ Implementation of Google NIMA paper by Tensorflow Slim. Evaluate food photos wit
 # Evaluation:
 1. Download [model](https://drive.google.com/file/d/16eK7ByJi1zV68v7OS6LKshDlll-AeSpj/view?usp=sharing)  or use self-trained model.
 2. Run below instruction and the program will load all the photos in dataset for esthetic evaluation. <br />
-
 ```python3 evaluate_nima_vgg16.py --photo_dir= <path to photodir> --vgg16_path= <path to vgg16>```</br>
 example:</br>
 ```python3 evaluate_nima_vgg16.py --photo_dir=image/ --vgg16_path=vgg/nima-22500```
