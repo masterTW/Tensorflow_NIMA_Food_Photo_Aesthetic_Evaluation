@@ -97,18 +97,18 @@ class ConvNet(object):
             try:
                 saver.restore(sess, FLAGS.vgg16_path)
                 print('Checkpoint found')
-            except:
-                print('No checkpoint found')
-            for (dirpath, dirnames, filenames) in os.walk(FLAGS.photo_dir):
-                final_scores = {}
-                for image_name in filenames:
-                    img = get_test_image(os.path.join(dirpath, image_name))
-                    score, logits = sess.run([self.mean, self.logits], feed_dict={self.img:sess.run(img)})
-                    for x in score.tolist():
-                        final_scores[image_name] = x[0]
-                print("(image name, aesthetic score):")
-                #sort a dictionary by value
-                print(sorted(final_scores.items(), key=itemgetter(1)))
+                for (dirpath, dirnames, filenames) in os.walk(FLAGS.photo_dir):
+                    final_scores = {}
+                    for image_name in filenames:
+                        img = get_test_image(os.path.join(dirpath, image_name))
+                        score, logits = sess.run([self.mean, self.logits], feed_dict={self.img:sess.run(img)})
+                        for x in score.tolist():
+                            final_scores[image_name] = x[0]
+                    print("(image name, aesthetic score):")
+                    #sort a dictionary by value
+                    print(sorted(final_scores.items(), key=itemgetter(1)))
+            except Exception as e:
+                print(e)
 
 
 if __name__ == '__main__':
