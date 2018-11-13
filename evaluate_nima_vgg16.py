@@ -101,7 +101,7 @@ class ConvNet(object):
                     final_scores = {}
                     for image_name in filenames:
                         img = get_test_image(os.path.join(dirpath, image_name))
-                        score, logits = sess.run([self.mean, self.logits], feed_dict={self.img:sess.run(img)})
+                        score = sess.run(self.mean, feed_dict={self.img:sess.run(img)})
                         for x in score.tolist():
                             final_scores[image_name] = x[0]
                     print("(image name, aesthetic score):")
