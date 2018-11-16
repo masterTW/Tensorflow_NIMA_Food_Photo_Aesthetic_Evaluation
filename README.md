@@ -14,13 +14,13 @@ Implementation of Google NIMA paper by Tensorflow Slim. Evaluate food photos wit
 1. Download [AVA dataset](https://github.com/mtobeiyf/ava_downloader).
 2. Download [Slim VGG16 pre-trained model](https://github.com/tensorflow/models/tree/master/research/slim). These CNNs have been trained on the ILSVRC-2012-CLS image classification dataset.
 3. Convert AVA food data to TFRecords, execute the following instructions.</br>
-```python3 convert_tfrecord.py --ava_dir= <path to ava_dir> --dataset_dir= <TFRecord storage path> ```</br>
+```python3 convert_tfrecord.py --ava_dir=<path to ava_dir> --dataset_dir=<TFRecord storage path> ```</br>
 4. Training model, execute the following instructions.</br>
-```sudo python3  train_nima_vgg16.py --checkpoint_path= <path to pre-traind model> --dataset_dir= <path to TFRecords_dir>```</br>
+```sudo python3  train_nima_vgg16.py --checkpoint_path=<path to pre-traind model> --dataset_dir=<path to TFRecords_dir>```</br>
 # Evaluation:
 1. Download [the project's model](https://drive.google.com/file/d/16eK7ByJi1zV68v7OS6LKshDlll-AeSpj/view?usp=sharing)  or use self-trained model.
 2. Run below instruction and the program will load all the photos in dataset for esthetic evaluation. <br />
-```python3 evaluate_nima_vgg16.py --photo_dir= <path to photodir> --vgg16_path= <path to vgg16>```</br>
+```python3 evaluate_nima_vgg16.py --photo_dir=<path to photodir> --vgg16_path=<path to vgg16>```</br>
 example:</br>
 ```python3 evaluate_nima_vgg16.py --photo_dir=image/ --vgg16_path=vgg/nima-22500```
 # Resullt:
