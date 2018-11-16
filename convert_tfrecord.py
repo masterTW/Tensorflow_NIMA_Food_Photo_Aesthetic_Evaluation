@@ -4,7 +4,6 @@ import utils
 import tensorflow as tf
 
 FLAGS = tf.app.flags.FLAGS
-
 tf.app.flags.DEFINE_string(
     'ava_dir', '.', 'The directory where the AVA dataset is stored.')
 
@@ -34,7 +33,6 @@ def convert_to_TFRecord(ava, ava_fooddrink_file):
     counts = {'train': 0, 'test': 0}
     writers = {}
     utils.safe_mkdir(FLAGS.dataset_dir)
-
     with tf.Session() as sess:
         for i in ava:
             for j in ava_fooddrink_file:
@@ -52,7 +50,6 @@ def convert_to_TFRecord(ava, ava_fooddrink_file):
                                     FLAGS.dataset_dir, '{}_AVA_fooddrink.tfrecord'.format(
                                         split))
                                 writers[split] = tf.python_io.TFRecordWriter(writer_path)
-
                             scores = tf.train.FloatList(value=list(map(int, i[2:12])))
                             image = tf.train.BytesList(value=[image_data])
                             features = tf.train.Features(feature={
