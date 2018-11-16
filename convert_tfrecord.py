@@ -28,7 +28,6 @@ def get_File():
     return ava, ava_fooddrink_file
 
 def convert_to_TFRecord(ava, ava_fooddrink_file):
-
     image_path = tf.placeholder(dtype=tf.string)
     jpeg = tf.read_file(image_path)
     decoded = tf.image.decode_jpeg(jpeg, channels=3)
@@ -72,9 +71,10 @@ def convert_to_TFRecord(ava, ava_fooddrink_file):
             f.write('{}\n'.format(count))
 
 def main(_):
-	ava, ava_fooddrink_file = get_File()
-	convert_to_TFRecord(ava, ava_fooddrink_file)
-
+    print("Program start")
+    ava, ava_fooddrink_file = get_File()
+    convert_to_TFRecord(ava, ava_fooddrink_file)
+    print("end")
 if __name__ == '__main__':
     tf.flags.mark_flags_as_required(['dataset_dir', 'ava_dir'])
     tf.app.run()
