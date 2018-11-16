@@ -143,8 +143,6 @@ class ConvNet(object):
         full_optimizer = tf.train.AdamOptimizer(learning_rate)
         self.opt = full_optimizer.minimize(self.loss)
 
-
-
     def summary(self):
         '''
         Create summaries to write on TensorBoard
@@ -152,7 +150,6 @@ class ConvNet(object):
         with tf.name_scope('summaries'):
             tf.summary.scalar('loss', self.loss)
             self.summary_op = tf.summary.merge_all()
-
 
     def expectation(self):
         '''
