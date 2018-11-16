@@ -151,7 +151,6 @@ class ConvNet(object):
         '''
         with tf.name_scope('summaries'):
             tf.summary.scalar('loss', self.loss)
-            tf.summary.histogram('histogram loss', self.loss)
             self.summary_op = tf.summary.merge_all()
 
 
@@ -265,7 +264,6 @@ class ConvNet(object):
         utils.safe_mkdir('checkpoints')
         utils.safe_mkdir('checkpoints/vgg16')
         writer = tf.summary.FileWriter('./graphs/vgg16', tf.get_default_graph())
-        variables_to_restore = slim.get_variables_to_restore(exclude=["vgg_16/fc8"])
         init_fn=_get_init_fn()
         with tf.Session() as sess:
             sess.run(tf.global_variables_initializer())
